@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
+import About from "./components/About";
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const toggleDarkMode = () => {
+    if (darkMode === "dark") {
+      SetDarkMode("light");
+      document.body.style.backgroundColor = "white";
+    } else {
+      SetDarkMode("dark");
+      document.body.style.backgroundColor = "#212529";
+    }
+  };
+
+  const [darkMode, SetDarkMode] = useState("light");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar
+          title="TextInsight"
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
+        <div>
+          <Routes>
+            <Route
+              exact
+              path="/about"
+              element={<About darkMode={darkMode}></About>}
+            ></Route>
+            <Route
+              exact
+              path="/"
+              element={
+                <TextForm
+                  darkMode={darkMode}
+                  heading="Text-Analyzer"
+                ></TextForm>
+              }
+            ></Route>
+          </Routes>
+        </div>
+
+        <Footer darkMode={darkMode}></Footer>
+      </Router>
+    </>
   );
 }
 
