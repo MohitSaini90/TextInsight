@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const handle_onClick1 = () => {
-    var home = document.querySelector(".home");
-    home.classList.add("active");
+    var home = document.querySelectorAll(".home");
+    home[1].classList.add("active");
     var features = document.querySelector("#features");
     features.classList.remove("active");
   };
   const handle_onClick2 = () => {
     var features = document.querySelector("#features");
     features.classList.add("active");
-    var home = document.querySelector("#home");
-    home.classList.remove("active");
+    var home = document.querySelectorAll(".home");
+    home[1].classList.remove("active");
   };
   return (
     <nav
@@ -20,7 +20,7 @@ export default function Navbar(props) {
       data-bs-theme={props.darkMode}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand home" to="/" onclick={handle_onClick1} >
+        <Link className="navbar-brand home" to="/" onClick={handle_onClick1}>
           {props.title}
         </Link>
         <button
@@ -36,9 +36,9 @@ export default function Navbar(props) {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-            <li className="nav-item home">
+            <li className="nav-item">
               <Link
-                className="nav-link active"
+                className="nav-link active home"
                 aria-current="page"
                 to="/"
                 onClick={handle_onClick1}
