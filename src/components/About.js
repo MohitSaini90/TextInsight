@@ -4,7 +4,7 @@ export default function About(props) {
   return (
     <div>
       <header className="bg-dark text-white text-center py-5">
-        <h1>Your App Name</h1>
+        <h1>{props.title}</h1>
       </header>
 
       <section
