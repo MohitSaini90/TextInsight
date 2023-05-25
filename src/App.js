@@ -31,7 +31,7 @@ function App() {
             <Route
               exact
               path="/about"
-              element={<About darkMode={darkMode}></About>}
+              element={<About darkMode={darkMode} title="TextInsight"></About>}
             ></Route>
             <Route
               exact
