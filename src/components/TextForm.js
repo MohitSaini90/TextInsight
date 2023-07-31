@@ -22,6 +22,7 @@ export default function TextForm(props) {
     setText(newText);
   };
   const handle_copyText = () => {
+    event.preventDefault();
     var selectText = document.querySelector("#mybox");
     selectText.select();
     navigator.clipboard.writeText(selectText.value);
