@@ -21,7 +21,7 @@ export default function TextForm(props) {
     var newText = "";
     setText(newText);
   };
-  const handle_copyText = () => {
+  const handle_copyText = (event) => {
     event.preventDefault();
     var selectText = document.querySelector("#mybox");
     selectText.select();
