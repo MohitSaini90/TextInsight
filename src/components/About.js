@@ -15,7 +15,7 @@ export default function About(props) {
       >
         <h2>About</h2>
         <p>
-          Welcome to Your App Name, the ultimate text manipulation tool that
+          Welcome to TextInsight, the ultimate text manipulation tool that
           puts the power of formatting and editing in your hands. Whether you
           need to convert text to uppercase or lowercase, clear unnecessary
           formatting, format text in a specific style, find and replace words or
@@ -58,14 +58,14 @@ export default function About(props) {
         </ol>
 
         <p>
-          Whether you're a writer, student, or professional, Your App Name
+          Whether you're a writer, student, or professional, TextInsight
           offers a user-friendly interface and intuitive controls that make text
           manipulation a breeze. We understand that the details matter, and our
           app empowers you to refine your text to perfection.
         </p>
 
         <p>
-          Start using Your App Name today and experience the convenience and
+          Start using TextInsight today and experience the convenience and
           efficiency of having a comprehensive text manipulation tool at your
           fingertips. Empower your words, enhance your communication, and unlock
           the full potential of your text.
@@ -73,7 +73,7 @@ export default function About(props) {
       </section>
 
       <footer className="bg-dark text-white text-center py-3 mt-5">
-        &copy; 2023 Your App Name. All rights reserved.
+        &copy; 2023 TextInsight. All rights reserved.
       </footer>
     </div>
   );
